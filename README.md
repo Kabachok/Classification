@@ -1,2 +1,4 @@
 # Classification
-A very simple data-driven website ( demonstration of using handlebars)
+A very simple and primitive data-driven website (demonstration of using handlebars).
+
+
