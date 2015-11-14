@@ -1,0 +1,91 @@
+<!-- This is a first example of using a template -->
+
+<head>
+
+<!-- include our libraries and css files -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="AnimalsData.js"></script>
+<script src="assignment.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="assignment.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+
+      <!-- page tile -->
+      <div class="page-header">
+        <h1>Classification</h1>
+      </div>    
+
+      <!-- A navigation menu -->
+      <ul class="nav nav-tabs">
+            <li role="" class="active"><a href="#" id="classes-tab" >Classes</a></li>
+            <li role=""><a href="#" id="animals-tab" >Animals</a></li>
+          </ul>
+      <br/><br/>
+
+
+      <!-- the content section is empty as we will fill it 
+            via javascript and templates -->
+      <div id="content"  class="container-fluid page-content"  role="main">
+      </div>
+    </div> <!-- / container -->
+
+<!-- Here are our Templates -->
+
+<!-- A template for classes  -->
+<script id="classes-template" type="text/x-handlebars-template">
+  <div class="row">
+
+    {{#each class}}
+    <div class="col-xs-12 col-md-4"> 
+    	<div class = "class-btn" data-id="{{@index}}">
+    		<h4>{{name}}</h4>
+    		<p>Total elements: {{animals.length}}</p>
+    	</div>
+        
+    </div> <!-- / col -->
+
+    {{/each}}
+
+  </div> <!-- / row -->
+</script>
+
+<!-- A template for animals  -->
+<script id="animals-template" type="text/x-handlebars-template">
+  {{#each animals}}
+  <div class="row">
+    <div class="col-xs-12"> 
+    	<h2>{{name}}</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-5 col-xs-offset-1"> 
+    	<div class="image" data-id="{{@index}}">
+    		<img class="crop-img img-fluid" src="{{image1}}" alt=""/>
+    	</div>
+    </div>
+    <div class="col-xs-5"> 
+    	<div class="image" data-id="{{@index}}">
+    		<img class="crop-img img-fluid" src="{{image2}}" alt=""/>
+    	</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12"> 
+    	<p class="description">{{description}}<p>
+    </div>
+  </div>
+  {{/each}}
+</script>
+
+</body>

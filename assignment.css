@@ -1,0 +1,40 @@
+/* put your css code here */
+h1 {
+	text-align: center;
+}
+.page-content {
+	border-right: 1px solid lightgray;
+	border-left: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	padding: 20px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.nav-tabs li a{
+	padding-right: 100px;
+	padding-left: 100px;
+	text-align: center;
+	color: #989;
+}
+.nav-tabs li a:hover{
+	color: #424;
+	background-color: #dcd;
+}
+.class-btn {
+	border-radius: 15px;
+	background-color: #424;
+	padding: 15px;
+	color: floralwhite;
+	cursor: pointer;
+}
+.crop-img {
+	border-radius: 35px;
+	padding: 10px;
+	max-width: 100%;
+}
+.description {
+	text-align: left;
+	font-family: sans-serif;
+	font-size: 105%;
+	padding-top: 20px;
+}
